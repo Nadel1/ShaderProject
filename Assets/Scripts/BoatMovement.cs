@@ -164,6 +164,10 @@ public class BoatMovement : MonoBehaviour
         //eventhough this is not fully realistic, it is the most satisfactory in the used context
         rb.velocity = transform.forward * forwardVel;
         //Debug.Log(forwardVel);
+        if (Input.GetKey("escape"))
+        {
+            Application.Quit();
+        }
     }
     private void OnCollisionEnter(Collision collision)
     {
